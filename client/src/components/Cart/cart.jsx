@@ -192,7 +192,7 @@ export const FullScreenDialog = ({ icon }) => {
                         // Removes the item from the cart
                         onClick={() => handleRemoveFromCart(item.id)}
                       >
-
+                        <DeleteIcon/>
                       </IconButton>
                     }
                   >
