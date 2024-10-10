@@ -84,8 +84,8 @@ export const Nav = () => {
             <Tab
               // When the user selects this value this is what will save to the state
               // and indicate which route to send to use
-              value="one"
               label="Home"
+              onClick={() => navigate("/")}
               sx={{
                 minWidth: 80,
                 padding: "6px 12px",
@@ -96,7 +96,7 @@ export const Nav = () => {
             <Tab
               // When the user selects this value this is what will save to the state
               // and indicate which route to send to use
-              value="two"
+              onClick={() => navigate("/my/trips")}
               label="My Trips"
               sx={{
                 minWidth: 80,
@@ -118,7 +118,13 @@ export const Nav = () => {
                 }}
               />
             ) : (
-              <Tab label="Login" value="three" />
+              <Tab
+                label="Login"
+                onClick={() => {
+                  // Sets the message on the snackbar                Auth.logout();
+                  navigate("/login");
+                }}
+              />
             )}
           </Tabs>
         </Grid>
